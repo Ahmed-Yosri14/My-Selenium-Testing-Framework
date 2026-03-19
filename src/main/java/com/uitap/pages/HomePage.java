@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
     By ajaxSection = By.xpath("//a[@href='/ajax']");
     By clickSection = By.xpath("//a[@href='/click']");
     By inputSection = By.xpath("//a[@href='/textinput']");
-
+    By scrollSection = By.xpath("//a[@href='/scrollbars']");
     public DynamicIdPage clickDynamicIdSection(){
         click(dynamicIdSection);
         return new DynamicIdPage(driver);
@@ -40,6 +40,10 @@ public class HomePage extends BasePage {
     public InputPage clickInputSection(){
         click(inputSection);
         return new InputPage(driver);
+    }
+    public ScrollPage clickScrollSection(){
+        click(scrollSection);
+        return new ScrollPage(driver);
     }
 
 }
