@@ -12,7 +12,8 @@ public class HomePage extends BasePage {
     By dynamicIdSection = By.xpath("//a[@href='/dynamicid']");
     By classAttributeSection = By.xpath("//a[@href='/classattr']");
     By delaySection = By.xpath("//a[@href='/loaddelay']");
-    By AjaxSection = By.xpath("//a[@href='/ajax']");
+    By ajaxSection = By.xpath("//a[@href='/ajax']");
+    By clickSection = By.xpath("//a[@href='/click']");
     public DynamicIdPage clickDynamicIdSection(){
         click(dynamicIdSection);
         return new DynamicIdPage(driver);
@@ -27,8 +28,12 @@ public class HomePage extends BasePage {
         return new DelayPage(driver);
     }
     public AJAXPage clickAjaxSection(){
-        click(AjaxSection);
+        click(ajaxSection);
         return new AJAXPage(driver);
+    }
+    public ClickPage clickClickSection(){
+        click(clickSection);
+        return new ClickPage(driver);
     }
 
 

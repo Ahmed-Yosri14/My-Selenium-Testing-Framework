@@ -1,6 +1,7 @@
 package UitapTests.Base;
 
 import com.uitap.pages.HomePage;
+import com.utilities.Actions.ActionsUtility;
 import com.utilities.Switch.SwitchToUtility;
 import com.utilities.factory.DriverFactory;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ public class BaseTest {
     protected WebDriver driver;
     protected HomePage homePage;
     protected SwitchToUtility switchToUtility;
+    protected ActionsUtility actionsUtility;
     @BeforeMethod
     public void setUp() {
         DriverFactory.initDriver();
@@ -19,6 +21,7 @@ public class BaseTest {
         driver.get("http://uitestingplayground.com/home");
         homePage = new HomePage(driver);
         switchToUtility = new SwitchToUtility(driver);
+        actionsUtility= new ActionsUtility(driver);
         homePage = goToHomePage();
     }
     protected HomePage goToHomePage() {
