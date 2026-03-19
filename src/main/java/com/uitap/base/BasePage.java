@@ -1,6 +1,7 @@
 package com.uitap.base;
 
 import com.utilities.Actions.ActionsUtility;
+import com.utilities.Javascript.JavaScriptUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,11 +16,13 @@ public class BasePage {
     protected WebDriverWait wait;
     protected Duration defaultTimeout;
     protected ActionsUtility actions;
+    protected JavaScriptUtility jsUtility;
     public BasePage(WebDriver driver) {
         this.driver = driver;
         this.defaultTimeout = Duration.ofSeconds(15);
         this.wait = new WebDriverWait(driver, defaultTimeout);
         actions = new ActionsUtility(driver);
+        jsUtility = new JavaScriptUtility(driver);
     }
 
     protected WebElement find(By locator) {

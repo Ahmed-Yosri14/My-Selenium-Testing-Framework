@@ -1,16 +1,16 @@
 package com.utilities.Actions;
 
+import com.utilities.Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class ActionsUtility {
+public class ActionsUtility extends Utility {
 
-    private WebDriver driver;
     private final Actions actions;
 
     public ActionsUtility(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         this.actions = new Actions(driver);
     }
 

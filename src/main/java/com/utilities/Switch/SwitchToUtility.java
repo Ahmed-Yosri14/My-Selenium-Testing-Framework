@@ -1,14 +1,14 @@
 package com.utilities.Switch;
 
+import com.utilities.Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SwitchToUtility {
+public class SwitchToUtility extends Utility {
 
-    private WebDriver driver;
 
     public SwitchToUtility(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     private WebDriver.TargetLocator switchTo() {
